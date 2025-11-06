@@ -103,6 +103,20 @@ const CONFIG = {
           </div>
         </div>
       </Section>
+      {/* Стоимость / расчёт */}
+      <Section id="pricing">
+        <h2 className="title">Стоимость</h2>
+        <div className="card">
+          <div style={{display:"flex",justifyContent:"space-between",gap:12,flexWrap:"wrap"}}>
+            <b>Расчёт стоимости — индивидуально</b>
+            <span className="muted">Подберём режим, оценим объём, дадим фикс-цену</span>
+          </div>
+          <div className="row" style={{marginTop:12, flexWrap:"wrap"}}>
+            <a className="btn" href={CONFIG.whatsapp}>Получить предложение в WhatsApp</a>
+            <a className="btn alt" href="#contact">Оставить заявку</a>
+          </div>
+        </div>
+      </Section>
 
   pricing: [
     { name: "Расчёт стоимости", price: "Индивидуально", features: ["Подберём режим налогообложения", "Оценим объём операций", "Сформируем предложение под ваш бизнес"] }
