@@ -55,3 +55,5 @@ body {
 #services .card .btn { margin-left:auto; }
 #about ul li { margin: 6px 0; }
 .list .row { padding: 4px 0; }
+#cases .card b { font-weight:800; }
+#cases .card { min-height: 140px; }
