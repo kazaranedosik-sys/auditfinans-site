@@ -53,3 +53,5 @@ body {
 /* услуги */
 #services .card b { font-weight:800; }
 #services .card .btn { margin-left:auto; }
+#about ul li { margin: 6px 0; }
+.list .row { padding: 4px 0; }
