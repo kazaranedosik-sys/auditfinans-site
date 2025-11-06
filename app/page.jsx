@@ -161,9 +161,30 @@ const CONFIG = {
 function Section({ id, children, className }) {
   return <section id={id} className={"section " + (className || "")}><div className="container">{children}</div></section>;
 }
+function WhatsAppFloat({ href }) {
+  return (
+    <a
+      href={href}
+      aria-label="Написать в WhatsApp"
+      style={{
+        position: "fixed", right: 18, bottom: 18, zIndex: 1000,
+        width: 56, height: 56, borderRadius: 999,
+        display: "grid", placeItems: "center",
+        background: "#25D366", color: "#fff",
+        boxShadow: "0 10px 24px rgba(0,0,0,.18)", textDecoration: "none",
+        fontWeight: 700, fontSize: 14
+      }}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      WA
+    </a>
+  );
+}
 
 export default function Page() {
   return (
+    <WhatsAppFloat href={CONFIG.whatsapp} />
     <div>
       {/* Header c текстовым логотипом */}
       <header className="header">
