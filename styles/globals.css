@@ -59,3 +59,6 @@ body {
 #cases .card { min-height: 140px; }
 #pricing .card b { font-weight:800; }
 #faq .card b { font-weight:800; }
+/* контакты / реквизиты / карта */
+#contact .mapWrap { overflow: hidden; border-radius: 12px; }
+#contact .list .row b { font-weight:700; color:#0f172a; }
