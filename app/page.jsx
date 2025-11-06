@@ -6,8 +6,6 @@ import {
   ShieldCheck, BadgeRussianRuble, Building2, FileText, Calculator
 } from "lucide-react";
 import "../styles/globals.css";
-
-const CONFIG = {
 const CONFIG = {
   brand: "Аудит Финанс",
   tagline: "Аудит, налоги и бухгалтерия под ключ",
