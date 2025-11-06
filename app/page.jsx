@@ -212,26 +212,56 @@ export default function Page() {
         </div>
       </Section>
 
-      {/* Контакты (внизу страницы оставляем как было) */}
+      {/* Контакты / Реквизиты / Карта */}
       <Section id="contact">
         <h2 className="title">Связаться</h2>
         <div className="grid grid-2">
+          {/* Форма + быстрые контакты */}
           <div className="card">
             <b>Оставьте заявку</b>
             <form action={CONFIG.whatsapp} method="get" style={{display:"grid", gap:10, marginTop:10}}>
               <input placeholder="Ваше имя" required style={{padding:12,borderRadius:12,border:"1px solid #cbd5e1"}}/>
               <input placeholder="Телефон или email" required style={{padding:12,borderRadius:12,border:"1px solid #cbd5e1"}}/>
               <textarea placeholder="Коротко опишите запрос" rows={4} style={{padding:12,borderRadius:12,border:"1px solid #cbd5e1"}}/>
-              <button type="submit" className="btn">Отправить</button>
+              <button type="submit" className="btn">Написать в WhatsApp</button>
             </form>
-          </div>
-          <div className="card">
-            <b>Контакты</b>
-            <div className="list" style={{marginTop:8}}>
+
+            <div className="list" style={{marginTop:12}}>
               <div className="row"><Phone size={18}/> {CONFIG.ctaPhone}</div>
               <div className="row"><Mail size={18}/> {CONFIG.ctaEmail}</div>
               <div className="row"><MapPin size={18}/> {CONFIG.address}</div>
-              <a href={CONFIG.whatsapp} className="muted">Написать в WhatsApp</a>
+              <a href={CONFIG.whatsapp} className="muted">Связаться в WhatsApp</a>
+            </div>
+          </div>
+
+          {/* Реквизиты + карта */}
+          <div className="card">
+            <b>Реквизиты</b>
+            <div className="list" style={{marginTop:8}}>
+              <div className="row"><b style={{width:80}}>ИНН</b><span>— укажем позже</span></div>
+              <div className="row"><b style={{width:80}}>ОГРН</b><span>— укажем позже</span></div>
+              <div className="row"><b style={{width:80}}>Банк</b><span>— укажем позже</span></div>
+              <div className="row"><b style={{width:80}}>р/с</b><span>— укажем позже</span></div>
+              <div className="row"><b style={{width:80}}>БИК</b><span>— укажем позже</span></div>
+            </div>
+
+            <div style={{marginTop:12}}>
+              <div className="mapWrap">
+                <iframe
+                  title="Карта"
+                  width="100%"
+                  height="240"
+                  style={{border:0, borderRadius:12}}
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                  src={`https://maps.google.com/maps?q=${encodeURIComponent(CONFIG.address)}&output=embed`}
+                />
+              </div>
+              <div className="row" style={{marginTop:10, flexWrap:"wrap"}}>
+                <a className="btn alt" href={`https://yandex.ru/maps/?text=${encodeURIComponent(CONFIG.address)}`} target="_blank">Открыть в Яндекс.Картах</a>
+                <a className="btn alt" href={`https://maps.google.com/?q=${encodeURIComponent(CONFIG.address)}`} target="_blank">Открыть в Google Maps</a>
+              </div>
             </div>
           </div>
         </div>
