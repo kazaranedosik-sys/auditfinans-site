@@ -50,3 +50,6 @@ body {
 
 .btn.alt { background:#fff; color:#0f172a; border:1px solid #0f172a; }
 .btn.alt:hover { background:#0f172a; color:#fff; }
+/* услуги */
+#services .card b { font-weight:800; }
+#services .card .btn { margin-left:auto; }
