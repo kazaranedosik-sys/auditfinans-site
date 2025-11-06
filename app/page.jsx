@@ -40,6 +40,35 @@ const CONFIG = {
           ))}
         </div>
       </Section>
+      {/* О компании */}
+      <Section id="about">
+        <h2 className="title">О компании</h2>
+        <div className="grid grid-2">
+          <div className="card">
+            <b>Кто мы</b>
+            <p className="muted" style={{marginTop:8}}>
+              «Аудит Финанс» — практики по налогам, бухгалтерии и правовому сопровождению.
+              Работаем с малым и средним бизнесом Сочи/Адлера и удалённо по РФ.
+              Делаем просто и по-делу: фиксируем договором, отвечаем в срок, берём ответственность.
+            </p>
+            <ul style={{marginTop:10, paddingLeft:18, color:"#334155"}}>
+              <li>1С Фреш, ЭДО (Диадок/Контур), банки/кассы, интеграции</li>
+              <li>Переходы УСН/ОСНО/ПСН, раздельный учёт, НДС</li>
+              <li>Подготовка пояснений в ИФНС, сопровождение камеральных</li>
+            </ul>
+          </div>
+
+          <div className="card">
+            <b>Почему выбирают нас</b>
+            <div className="list" style={{marginTop:8}}>
+              <div className="row"><CheckCircle2 size={18}/> Понятные условия и стоимость</div>
+              <div className="row"><CheckCircle2 size={18}/> Быстрые ответы в WhatsApp</div>
+              <div className="row"><CheckCircle2 size={18}/> Конфиденциальность и ответственность</div>
+              <div className="row"><CheckCircle2 size={18}/> Практический опыт в гостеприимстве и аренде</div>
+            </div>
+          </div>
+        </div>
+      </Section>
 
   pricing: [
     { name: "Расчёт стоимости", price: "Индивидуально", features: ["Подберём режим налогообложения", "Оценим объём операций", "Сформируем предложение под ваш бизнес"] }
