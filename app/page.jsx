@@ -117,6 +117,36 @@ const CONFIG = {
           </div>
         </div>
       </Section>
+      {/* FAQ */}
+      <Section id="faq">
+        <h2 className="title">FAQ</h2>
+        <div className="grid grid-2">
+          <div className="card">
+            <b>Работаете только в Сочи?</b>
+            <p className="muted" style={{marginTop:8}}>
+              Работаем по всей России: ЭДО, ЭЦП, 1С Фреш. Встречи — онлайн/офлайн.
+            </p>
+          </div>
+          <div className="card">
+            <b>Можно взять учёт с середины года?</b>
+            <p className="muted" style={{marginTop:8}}>
+              Да. Переносим базу, восстанавливаем учёт, при необходимости сдаём уточнённые декларации.
+            </p>
+          </div>
+          <div className="card">
+            <b>Поможете при камеральной проверке?</b>
+            <p className="muted" style={{marginTop:8}}>
+              Готовим пояснения, собираем документы, сопровождаем до решения. При споре — обжалуем.
+            </p>
+          </div>
+          <div className="card">
+            <b>Как связаться быстро?</b>
+            <p className="muted" style={{marginTop:8}}>
+              Нажмите «Написать в WhatsApp» — отвечаем обычно в течение дня.
+            </p>
+          </div>
+        </div>
+      </Section>
 
   pricing: [
     { name: "Расчёт стоимости", price: "Индивидуально", features: ["Подберём режим налогообложения", "Оценим объём операций", "Сформируем предложение под ваш бизнес"] }
