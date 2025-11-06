@@ -22,6 +22,25 @@ const CONFIG = {
     { icon: FileText, title: "Правовое сопровождение", text: "Договоры аренды и управления, претензии, досудебка." },
     { icon: ShieldCheck, title: "Налоговая безопасность", text: "Диагностика рисков, письма в ИФНС, защита позиции." },
   ],
+        {/* Услуги */}
+      <Section id="services">
+        <h2 className="title">Услуги</h2>
+        <div className="grid grid-2">
+          {CONFIG.services.map((s, i) => (
+            <div key={i} className="card">
+              <div className="row" style={{marginBottom:8}}>
+                <s.icon size={20} />
+                <b>{s.title}</b>
+              </div>
+              <p className="muted">{s.text}</p>
+              <div className="row" style={{marginTop:12}}>
+                <a href={CONFIG.whatsapp} className="btn">Уточнить в WhatsApp</a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
   pricing: [
     { name: "Расчёт стоимости", price: "Индивидуально", features: ["Подберём режим налогообложения", "Оценим объём операций", "Сформируем предложение под ваш бизнес"] }
   ],
@@ -117,3 +136,22 @@ export default function Page() {
     </div>
   );
 }
+/* ---- базовые блоки для макета ---- */
+.header { position: sticky; top: 0; background:#fff; border-bottom:1px solid #e5e7eb; z-index:10; }
+.nav { display:flex; align-items:center; justify-content:space-between; padding:14px 0; gap:12px; }
+.brand { display:flex; align-items:center; gap:10px; font-weight:800; font-size:18px; color:#0f172a; }
+
+.section { padding:40px 0; }
+.title { font-size:28px; font-weight:800; margin-bottom:14px; }
+.muted { color:#64748b; }
+
+.grid { display:grid; gap:16px; }
+.grid-2 { grid-template-columns: 1fr; }
+@media (min-width: 900px) { .grid-2 { grid-template-columns: 1.1fr .9fr; } }
+
+.row { display:flex; align-items:center; gap:8px; }
+
+.card { border:1px solid #e5e7eb; border-radius:14px; padding:16px; background:#fff; box-shadow:0 6px 18px rgba(2,6,23,.04); }
+
+.btn.alt { background:#fff; color:#0f172a; border:1px solid #0f172a; }
+.btn.alt:hover { background:#0f172a; color:#fff; }
