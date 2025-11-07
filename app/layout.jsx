@@ -1,3 +1,4 @@
+import "./styles/globals.css";
 export const metadata = {
   title: "Аудит Финанс — налоги и бухгалтерия под ключ",
   description:
